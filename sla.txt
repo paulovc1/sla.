@@ -1,0 +1,42 @@
+from collections import defaultdict
+from datetime import datetime
+
+# Função para processar os dados
+def processar_vendas(dados):
+    vendas_por_regiao = defaultdict(lambda: defaultdict(int))
+    vendas_por_produto_e_data = defaultdict(lambda: defaultdict(int))
+
+    for regiao, produto, quantidade, data in dados:
+        # Atualizar vendas por região e produto
+        vendas_por_regiao[regiao][produto] += quantidade
+        
+        # Atualizar vendas por produto e data
+        data_formatada = datetime.strptime(data, '%Y-%m-%d').date()
+        vendas_por_produto_e_data[produto][data_formatada] += quantidade
+
+    return vendas_por_regiao, vendas_por_produto_e_data
+
+# Lista de tuplas com dados de exemplo
+dados_exemplo = [
+    ('Norte', 'Produto A', 10, '2024-01-01'),
+    ('Norte', 'Produto B', 5, '2024-01-02'),
+    ('Sul', 'Produto A', 8, '2024-01-01'),
+    ('Norte', 'Produto A', 7, '2024-01-03'),
+    ('Sul', 'Produto B', 3, '2024-01-03'),
+]
+
+# Processar os dados
+vendas_por_regiao, vendas_por_produto_e_data = processar_vendas(dados_exemplo)
+
+# Exibir resultados
+print("Vendas por Região e Produto:")
+for regiao, produtos in vendas_por_regiao.items():
+    print(f"Região: {regiao}")
+    for produto, quantidade in produtos.items():
+        print(f"  Produto: {produto}, Quantidade Vendida: {quantidade}")
+
+print("\nVendas por Produto e Data:")
+for produto, datas in vendas_por_produto_e_data.items():
+    print(f"Produto: {produto}")
+    for data, quantidade in sorted(datas.items()):
+        print(f"  Data: {data}, Quantidade Vendida: {quantidade}")

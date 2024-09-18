@@ -1,0 +1,18 @@
+# Lista inicial de artistas na agenda
+agenda = ["Artista A", "Artista B", "Artista C", "Artista D", "Artista E"]
+
+# Informação sobre o artista cancelado
+artista_cancelado = "Artista C"
+indice_cancelado = agenda.index(artista_cancelado)
+
+# Novo artista a ser adicionado
+novo_artista = "Artista F"
+
+# Remover o artista cancelado da lista
+agenda.pop(indice_cancelado)
+
+# Adicionar o novo artista na mesma posição
+agenda.insert(indice_cancelado, novo_artista)
+
+# Mostrar a lista de artistas atualizada
+print("Agenda atualizada:", agenda)

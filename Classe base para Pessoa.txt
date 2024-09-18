@@ -1,0 +1,71 @@
+# Classe base para Pessoa
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def exibir_informacoes(self):
+        print(f"Nome: {self.nome}, Idade: {self.idade}")
+
+# Classe Funcionario que herda de Pessoa
+class Funcionario(Pessoa):
+    def __init__(self, nome, idade, cargo):
+        super().__init__(nome, idade)
+        self.cargo = cargo
+
+    def exibir_informacoes(self):
+        super().exibir_informacoes()
+        print(f"Cargo: {self.cargo}")
+
+# Classe Aluno que herda de Pessoa
+class Aluno(Pessoa):
+    def __init__(self, nome, idade, matricula):
+        super().__init__(nome, idade)
+        self.matricula = matricula
+
+    def exibir_informacoes(self):
+        super().exibir_informacoes()
+        print(f"Matrícula: {self.matricula}")
+
+# Classe Escola para gerenciar funcionários e alunos
+class Escola:
+    def __init__(self):
+        self.funcionarios = []
+        self.alunos = []
+
+    def adicionar_funcionario(self, funcionario):
+        self.funcionarios.append(funcionario)
+
+    def adicionar_aluno(self, aluno):
+        self.alunos.append(aluno)
+
+    def exibir_funcionarios(self):
+        print("Funcionários:")
+        for f in self.funcionarios:
+            f.exibir_informacoes()
+            print()
+
+    def exibir_alunos(self):
+        print("Alunos:")
+        for a in self.alunos:
+            a.exibir_informacoes()
+            print()
+
+# Testando o sistema
+escola = Escola()
+
+# Adicionando Funcionários
+funcionario1 = Funcionario("Maria Silva", 30, "Professor")
+funcionario2 = Funcionario("João Santos", 40, "Coordenador")
+escola.adicionar_funcionario(funcionario1)
+escola.adicionar_funcionario(funcionario2)
+
+# Adicionando Alunos
+aluno1 = Aluno("Pedro Oliveira", 15, "A1234")
+aluno2 = Aluno("Ana Costa", 16, "B5678")
+escola.adicionar_aluno(aluno1)
+escola.adicionar_aluno(aluno2)
+
+# Exibindo informações
+escola.exibir_funcionarios()
+escola.exibir_alunos()

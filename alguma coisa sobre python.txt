@@ -1,0 +1,9 @@
+class carro:
+ def __init__(self, marca, cor, motor):
+  self.marca = marca
+  self.cor = cor
+  self.motor = motor
+
+novo_carro = Carro( marca: "Ford", cor: "Azul", motor: 2)
+print (novo_carro.marca) 
+print (novo_caro.cor)

@@ -1,0 +1,13 @@
+import numpy as np
+b = np.array([[1, 2, 300], [4, 5, 500]])
+print(b)
+print(b[1])
+print(max(b[1]))
+print(sum(b[1]))
+print("----Matriz com arange-----------------------")
+matriz_dez = np.arange(10)
+print(matriz_dez)
+print("----------------------------")
+print("matriz pula numero")
+pula_dois = np.arange(3,10,1)
+print(pula_dois)

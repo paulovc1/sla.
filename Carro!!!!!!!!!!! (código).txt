@@ -1,0 +1,47 @@
+# Criação da classe Carro
+class Carro:
+    # Criação dos atributos
+    def __init__(self, modelo, cor, valor, ano):
+        self.modelo = modelo
+        self.cor = cor
+        self.valor = valor
+        self.ano = ano
+
+    # Criação do método para calcular valor com desconto
+    def calcular_valor_com_desconto(self, desconto_percentual):
+        desconto = self.valor * (desconto_percentual / 100)
+        return self.valor - desconto
+
+    # Criação do método para calcular valor parcelado
+    def calcular_valor_parcelado(self, numero_parcelas):
+        if numero_parcelas <= 0:
+            raise ValueError("Número de parcelas deve ser maior que zero.")
+        return self.valor / numero_parcelas
+
+# Função para criar um objeto Carro a partir de entradas do usuário
+def criar_carro():
+    modelo = input("Digite o modelo do carro: ")
+    cor = input("Digite a cor do carro: ")
+    valor = float(input("Digite o valor do carro: "))
+    ano = int(input("Digite o ano do carro: "))
+    return Carro(modelo, cor, valor, ano)
+
+# Criação de 3 objetos da classe Carro a partir das entradas do usuário
+print("Cadastro do primeiro carro:")
+carro1 = criar_carro()
+
+print("Cadastro do segundo carro:")
+carro2 = criar_carro()
+
+print("Cadastro do terceiro carro:")
+carro3 = criar_carro()
+
+# Utilização dos métodos com os objetos criados
+# Aplicando 10% de desconto no carro1
+print(f"Valor com desconto do carro1: {carro1.calcular_valor_com_desconto(10):.2f}")
+
+# Calculando valor parcelado do carro2 em 12 vezes
+print(f"Valor parcelado do carro2 (12x): {carro2.calcular_valor_parcelado(12):.2f}")
+
+# Calculando valor parcelado do carro3 em 24 vezes
+print(f"Valor parcelado do carro3 (24x): {carro3.calcular_valor_parcelado(24):.2f}")

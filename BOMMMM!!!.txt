@@ -1,0 +1,18 @@
+print("BUMMMM NA MENTE")
+inicio=0
+final=15
+pulo=3
+bum_na_mente = np.arange(inicio, final, pulo)
+print(bum_na_mente)
+
+print(---------------------------------(-_-)------------------------------------)
+
+
+#Mesmo código, só que podendo digitar nele.
+print(----------------------)
+print("BUMMMM NA MENTE")
+inicio=int(input("Digite valor inicial"))
+final=int(input("Digite valor final"))
+pulo=int(input("Digite valor de intervalo"))
+bum_na_mente = np.arange(inicio, final, pulo)
+print(bum_na_mente)

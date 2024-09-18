@@ -1,0 +1,1 @@
+CREATE TABLE tb_turma (id_turma int primary key, nome varchar2(30), id_professor int (3), id_curso int (3), periodo int (3))

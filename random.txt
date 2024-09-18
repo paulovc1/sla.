@@ -1,0 +1,15 @@
+import random
+
+# Criar uma lista com 10 itens com valores aleatórios entre 1 e 50
+lista = [random.randint(1, 50) for _ in range(10)]
+
+# Calcular a soma, valor máximo e valor mínimo
+soma = sum(lista)
+maximo = max(lista)
+minimo = min(lista)
+
+# Exibir os resultados
+print(f"Lista: {lista}")
+print(f"Soma: {soma}")
+print(f"Valor máximo: {maximo}")
+print(f"Valor mínimo: {minimo}")

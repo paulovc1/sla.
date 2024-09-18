@@ -1,0 +1,5 @@
+Tipos de variáveis
+
+Idade = 0 (Int)
+Idade = 2,3 (Float)
+Idade = [] (Lista)

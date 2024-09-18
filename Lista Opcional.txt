@@ -1,0 +1,12 @@
+nome = []
+
+while True:
+    nome_add = input("Digite um nome: ")
+    nome.append(nome_add)
+    print("=========================")
+    print(f"lista {nome}")
+    print("=========================")
+    
+    deseja = input("Deseja sair? S/N: ")
+    if deseja == 'S':
+        break

@@ -1,0 +1,25 @@
+class Produto:
+    def __init__(self, nome, marca, preco):
+        self.nome = nome
+        self.marca = marca
+        self.preco = preco
+
+    def exibir_10vezes(self):
+        n=1
+        while n<=10:
+            print("Nome - ",n," ",self.nome)
+            n+=1
+def desconto_10(self):
+    print(f"Produto: {self.nome}, Valor"
+          f'Produto: {self.preco},'
+          f'Produto: 10% : {self.preco},')
+
+
+
+prod2 = Produto("SmartTV", "Philips", 4500)
+print(prod2.nome)
+prodx = Produto("Notebook", "Samsung", 3600)
+print(prodx.nome,prodx.preco)
+prodx.exibir_10vezes()
+
+

@@ -1,0 +1,14 @@
+idade=[]
+idade=[5,3]
+nome = []
+nome = ["John,Gambit"]
+
+print(nome)
+nome.append(10)
+print (nome)
+
+print(idade)
+idade.append(10)
+print(idade)
+
+idade = int(input("Digite a idade"))

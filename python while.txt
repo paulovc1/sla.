@@ -1,0 +1,11 @@
+nome = []
+idade = []
+while True: 
+    var_nom = input ("Digite o no ou <S> para sair: ")
+    if var_nom.upper()=="S":
+        break
+    nome.append(var_nom)
+    var_ida = int(input("Digite a idade: "))
+    idade.append(var_ida)
+print(nome)
+print(idade)

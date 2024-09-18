@@ -1,0 +1,45 @@
+contador = 0
+while contador < 3:
+    print (f'Contador é {contador}')
+    contador += 1
+print('------------------------------------')
+
+#outro
+
+while True:
+    print("Este loop nunca terminará! ")
+
+#infinito ^
+
+contato = 0
+while True:
+    print("Este loop nunca terminará! ")
+    contato +=1
+    if contato == 500:
+        print('Chegou no 500')
+        print('Valor mil......')
+    if contato == 700:
+        print ('Quebra')
+        break
+
+#Quebrou o código ^
+
+n=0
+tabuada = 3
+while n<=10:
+    print(tabuada, 'x', n, ' = ', n * tabuada)
+    n += 1
+
+tabuada=5
+for n in range(0,11,1):
+    print(tabuada, ' x ', n, ' = ', n * tabuada) 
+
+#(0: numero inicial/11: até onde vai/1: numero de repetição) ^
+
+senha = ''
+while len(senha) < 8 or not any (char.isdigit() for char in senha):
+        
+       senha = input('Senha forte: ')
+print('Senha cadastrada com sucesso! ')
+
+#*alguns desses códigos só funcionam se alguns serem eliminados ou apenas (#). *
